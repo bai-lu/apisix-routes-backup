@@ -1,0 +1,599 @@
+{
+    "code": 0,
+    "message": "",
+    "data": {
+        "rows": [
+            {
+                "id": "478814214438257333",
+                "create_time": 1701071256,
+                "update_time": 1701071256,
+                "uri": "/*",
+                "name": "apisix-dashboard",
+                "methods": [
+                    "GET",
+                    "POST",
+                    "PUT",
+                    "DELETE",
+                    "PATCH",
+                    "HEAD",
+                    "OPTIONS",
+                    "CONNECT",
+                    "TRACE",
+                    "PURGE"
+                ],
+                "hosts": [
+                    "apisix-dashboard.komichi.tech",
+                    "ad.komichi.tech"
+                ],
+                "upstream": {
+                    "nodes": [
+                        {
+                            "host": "10.43.231.220",
+                            "port": 80,
+                            "weight": 1
+                        }
+                    ],
+                    "timeout": {
+                        "connect": 6,
+                        "send": 6,
+                        "read": 6
+                    },
+                    "type": "roundrobin",
+                    "scheme": "http",
+                    "pass_host": "pass",
+                    "keepalive_pool": {
+                        "idle_timeout": 60,
+                        "requests": 1000,
+                        "size": 320
+                    }
+                },
+                "labels": {
+                    "API_VERSION": "v1"
+                },
+                "status": 1
+            },
+            {
+                "id": "478817558439396021",
+                "create_time": 1701071874,
+                "update_time": 1701071874,
+                "uri": "/*",
+                "name": "consul",
+                "methods": [
+                    "GET",
+                    "POST",
+                    "PUT",
+                    "DELETE",
+                    "PATCH",
+                    "HEAD",
+                    "OPTIONS",
+                    "CONNECT",
+                    "TRACE",
+                    "PURGE"
+                ],
+                "host": "consul.komichi.tech",
+                "plugins": {
+                    "basic-auth": {
+                        "_meta": {
+                            "disable": true
+                        }
+                    },
+                    "redirect": {
+                        "http_to_https": true
+                    }
+                },
+                "upstream": {
+                    "nodes": [
+                        {
+                            "host": "10.43.165.145",
+                            "port": 80,
+                            "weight": 1
+                        }
+                    ],
+                    "timeout": {
+                        "connect": 6,
+                        "send": 6,
+                        "read": 6
+                    },
+                    "type": "roundrobin",
+                    "scheme": "http",
+                    "pass_host": "pass",
+                    "keepalive_pool": {
+                        "idle_timeout": 60,
+                        "requests": 1000,
+                        "size": 320
+                    }
+                },
+                "status": 1
+            },
+            {
+                "id": "478823457459536565",
+                "create_time": 1701072811,
+                "update_time": 1701072811,
+                "uri": "/*",
+                "name": "miwifi",
+                "methods": [
+                    "GET",
+                    "POST",
+                    "PUT",
+                    "DELETE",
+                    "PATCH",
+                    "HEAD",
+                    "OPTIONS",
+                    "CONNECT",
+                    "TRACE",
+                    "PURGE"
+                ],
+                "host": "miwifi.komichi.tech",
+                "plugins": {
+                    "redirect": {
+                        "http_to_https": true
+                    }
+                },
+                "upstream": {
+                    "nodes": [
+                        {
+                            "host": "192.168.0.1",
+                            "port": 80,
+                            "weight": 1
+                        }
+                    ],
+                    "timeout": {
+                        "connect": 60,
+                        "send": 60,
+                        "read": 60
+                    },
+                    "type": "roundrobin",
+                    "scheme": "http",
+                    "pass_host": "node",
+                    "keepalive_pool": {
+                        "idle_timeout": 60,
+                        "requests": 1000,
+                        "size": 320
+                    }
+                },
+                "labels": {
+                    "API_VERSION": "v1"
+                },
+                "status": 1
+            },
+            {
+                "id": "479615901625221813",
+                "create_time": 1701072821,
+                "update_time": 1701072821,
+                "uri": "/*",
+                "name": "grafana",
+                "methods": [
+                    "GET",
+                    "POST",
+                    "PUT",
+                    "DELETE",
+                    "PATCH",
+                    "HEAD",
+                    "OPTIONS",
+                    "CONNECT",
+                    "TRACE",
+                    "PURGE"
+                ],
+                "hosts": [
+                    "grafana.komichi.tech",
+                    "d.komichi.tech"
+                ],
+                "plugins": {
+                    "redirect": {
+                        "http_to_https": true
+                    }
+                },
+                "upstream": {
+                    "nodes": [
+                        {
+                            "host": "10.43.146.250",
+                            "port": 80,
+                            "weight": 1
+                        }
+                    ],
+                    "timeout": {
+                        "connect": 60,
+                        "send": 60,
+                        "read": 60
+                    },
+                    "type": "roundrobin",
+                    "scheme": "http",
+                    "pass_host": "pass",
+                    "keepalive_pool": {
+                        "idle_timeout": 60,
+                        "requests": 1000,
+                        "size": 320
+                    }
+                },
+                "enable_websocket": true,
+                "status": 1
+            },
+            {
+                "id": "480482148881531573",
+                "create_time": 1701072831,
+                "update_time": 1701072831,
+                "uri": "/*",
+                "name": "minio-api",
+                "methods": [
+                    "GET",
+                    "POST",
+                    "PUT",
+                    "DELETE",
+                    "PATCH",
+                    "HEAD",
+                    "OPTIONS",
+                    "CONNECT",
+                    "TRACE",
+                    "PURGE"
+                ],
+                "host": "minio-api.komichi.tech",
+                "upstream": {
+                    "nodes": [
+                        {
+                            "host": "10.43.54.17",
+                            "port": 9000,
+                            "weight": 1
+                        }
+                    ],
+                    "timeout": {
+                        "connect": 60,
+                        "send": 60,
+                        "read": 60
+                    },
+                    "type": "roundrobin",
+                    "scheme": "http",
+                    "pass_host": "pass",
+                    "keepalive_pool": {
+                        "idle_timeout": 60,
+                        "requests": 1000,
+                        "size": 320
+                    }
+                },
+                "status": 1
+            },
+            {
+                "id": "480482226476155573",
+                "create_time": 1701072841,
+                "update_time": 1701072841,
+                "uri": "/*",
+                "name": "minio-console",
+                "methods": [
+                    "GET",
+                    "POST",
+                    "PUT",
+                    "DELETE",
+                    "PATCH",
+                    "HEAD",
+                    "OPTIONS",
+                    "CONNECT",
+                    "TRACE",
+                    "PURGE"
+                ],
+                "host": "minio-console.komichi.tech",
+                "upstream": {
+                    "nodes": [
+                        {
+                            "host": "10.43.54.17",
+                            "port": 9001,
+                            "weight": 1
+                        }
+                    ],
+                    "timeout": {
+                        "connect": 60,
+                        "send": 60,
+                        "read": 60
+                    },
+                    "type": "roundrobin",
+                    "scheme": "http",
+                    "pass_host": "pass",
+                    "keepalive_pool": {
+                        "idle_timeout": 60,
+                        "requests": 1000,
+                        "size": 320
+                    }
+                },
+                "enable_websocket": true,
+                "status": 1
+            },
+            {
+                "id": "487930432277447433",
+                "create_time": 1701072852,
+                "update_time": 1701072852,
+                "uri": "/*",
+                "name": "surge",
+                "methods": [
+                    "GET",
+                    "POST",
+                    "PUT",
+                    "DELETE",
+                    "PATCH",
+                    "HEAD",
+                    "OPTIONS",
+                    "CONNECT",
+                    "TRACE",
+                    "PURGE"
+                ],
+                "host": "surge.komichi.tech",
+                "plugins": {
+                    "redirect": {
+                        "http_to_https": true
+                    }
+                },
+                "upstream": {
+                    "nodes": [
+                        {
+                            "host": "192.168.0.2",
+                            "port": 6171,
+                            "weight": 1
+                        }
+                    ],
+                    "timeout": {
+                        "connect": 60,
+                        "send": 60,
+                        "read": 60
+                    },
+                    "type": "roundrobin",
+                    "scheme": "http",
+                    "pass_host": "node",
+                    "keepalive_pool": {
+                        "idle_timeout": 60,
+                        "requests": 1000,
+                        "size": 320
+                    }
+                },
+                "enable_websocket": true,
+                "status": 1
+            },
+            {
+                "id": "487930690764014345",
+                "create_time": 1701072862,
+                "update_time": 1701072862,
+                "uri": "/*",
+                "name": "portainer",
+                "methods": [
+                    "GET",
+                    "POST",
+                    "PUT",
+                    "DELETE",
+                    "PATCH",
+                    "HEAD",
+                    "OPTIONS",
+                    "CONNECT",
+                    "TRACE",
+                    "PURGE"
+                ],
+                "host": "portainer.komichi.tech",
+                "plugins": {
+                    "redirect": {
+                        "http_to_https": true
+                    }
+                },
+                "upstream": {
+                    "nodes": [
+                        {
+                            "host": "192.168.0.10",
+                            "port": 9443,
+                            "weight": 1
+                        }
+                    ],
+                    "timeout": {
+                        "connect": 60,
+                        "send": 60,
+                        "read": 60
+                    },
+                    "type": "roundrobin",
+                    "scheme": "https",
+                    "pass_host": "pass",
+                    "keepalive_pool": {
+                        "idle_timeout": 60,
+                        "requests": 1000,
+                        "size": 320
+                    }
+                },
+                "status": 1
+            },
+            {
+                "id": "487933457830249225",
+                "create_time": 1701072872,
+                "update_time": 1701072872,
+                "uri": "/*",
+                "name": "rancher",
+                "methods": [
+                    "GET",
+                    "POST",
+                    "PUT",
+                    "DELETE",
+                    "PATCH",
+                    "HEAD",
+                    "OPTIONS",
+                    "CONNECT",
+                    "TRACE",
+                    "PURGE"
+                ],
+                "host": "rancher.komichi.tech",
+                "plugins": {
+                    "redirect": {
+                        "http_to_https": true
+                    }
+                },
+                "upstream": {
+                    "nodes": [
+                        {
+                            "host": "192.168.0.110",
+                            "port": 443,
+                            "weight": 1
+                        }
+                    ],
+                    "timeout": {
+                        "connect": 60,
+                        "send": 60,
+                        "read": 60
+                    },
+                    "type": "roundrobin",
+                    "scheme": "https",
+                    "pass_host": "pass",
+                    "keepalive_pool": {
+                        "idle_timeout": 60,
+                        "requests": 1000,
+                        "size": 320
+                    }
+                },
+                "enable_websocket": true,
+                "status": 1
+            },
+            {
+                "id": "488238777207095909",
+                "create_time": 1701072882,
+                "update_time": 1701072882,
+                "uri": "/*",
+                "name": "prometheus",
+                "methods": [
+                    "GET",
+                    "POST",
+                    "PUT",
+                    "DELETE",
+                    "PATCH",
+                    "HEAD",
+                    "OPTIONS",
+                    "CONNECT",
+                    "TRACE",
+                    "PURGE"
+                ],
+                "host": "prometheus.komichi.tech",
+                "plugins": {
+                    "redirect": {
+                        "http_to_https": true
+                    }
+                },
+                "upstream": {
+                    "nodes": [
+                        {
+                            "host": "10.43.115.188",
+                            "port": 9090,
+                            "weight": 1
+                        }
+                    ],
+                    "timeout": {
+                        "connect": 60,
+                        "send": 60,
+                        "read": 60
+                    },
+                    "type": "roundrobin",
+                    "scheme": "http",
+                    "pass_host": "pass",
+                    "keepalive_pool": {
+                        "idle_timeout": 60,
+                        "requests": 1000,
+                        "size": 320
+                    }
+                },
+                "enable_websocket": true,
+                "status": 1
+            },
+            {
+                "id": "488752967705428719",
+                "create_time": 1701072892,
+                "update_time": 1701072892,
+                "uri": "/*",
+                "name": "longhorn",
+                "methods": [
+                    "GET",
+                    "POST",
+                    "PUT",
+                    "DELETE",
+                    "PATCH",
+                    "HEAD",
+                    "OPTIONS",
+                    "CONNECT",
+                    "TRACE",
+                    "PURGE"
+                ],
+                "host": "longhorn.komichi.tech",
+                "plugins": {
+                    "basic-auth": {
+                        "_meta": {
+                            "disable": true
+                        }
+                    },
+                    "redirect": {
+                        "http_to_https": true
+                    }
+                },
+                "upstream": {
+                    "nodes": [
+                        {
+                            "host": "10.43.123.104",
+                            "port": 80,
+                            "weight": 1
+                        }
+                    ],
+                    "timeout": {
+                        "connect": 60,
+                        "send": 60,
+                        "read": 60
+                    },
+                    "type": "roundrobin",
+                    "scheme": "http",
+                    "pass_host": "pass",
+                    "keepalive_pool": {
+                        "idle_timeout": 60,
+                        "requests": 1000,
+                        "size": 320
+                    }
+                },
+                "status": 1
+            },
+            {
+                "id": "489015305784263238",
+                "create_time": 1701072902,
+                "update_time": 1701072902,
+                "uri": "/*",
+                "name": "alist",
+                "methods": [
+                    "GET",
+                    "POST",
+                    "PUT",
+                    "DELETE",
+                    "PATCH",
+                    "HEAD",
+                    "OPTIONS",
+                    "CONNECT",
+                    "TRACE",
+                    "PURGE"
+                ],
+                "host": "alist.komichi.tech",
+                "plugins": {
+                    "redirect": {
+                        "http_to_https": true
+                    }
+                },
+                "upstream": {
+                    "nodes": [
+                        {
+                            "host": "192.168.0.10:5244",
+                            "port": 6171,
+                            "weight": 1
+                        }
+                    ],
+                    "timeout": {
+                        "connect": 60,
+                        "send": 60,
+                        "read": 60
+                    },
+                    "type": "roundrobin",
+                    "scheme": "http",
+                    "pass_host": "node",
+                    "keepalive_pool": {
+                        "idle_timeout": 60,
+                        "requests": 1000,
+                        "size": 320
+                    }
+                },
+                "enable_websocket": true,
+                "status": 1
+            }
+        ],
+        "total_size": 12
+    },
+    "request_id": "ded5e1f5-df99-4d2c-904b-836fdfb233a4"
+}
