@@ -11,6 +11,8 @@ apisix_admin_url = os.getenv("APISIX_ADMIN_URL")
 with open(routes_backup_file) as f:
     data = json.load(f)
 
+
+# 从 chrome dev tools 复制
 headers = {}
 
 
