@@ -16,3 +16,7 @@ export ROUTES_BACKUP_FILE="routes.json"
 ## headers 获取
 
 部分访问 apisix-dashboards 从 chrome 开发者模式复制(fetch格式)
+
+## plugins
+
+自定义插件, 增加官方版本不支持的场景
